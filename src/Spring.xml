@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ramu" class="com.akshay.acting.Juggler"/>
+	<bean id="somu" class="com.akshay.acting.Juggler">
+		<constructor-arg  value="10"/>
+	</bean>
+	
+	<bean id="mamu" class="com.akshay.acting.Juggler">
+		<property name="numRings"  value="15"/>
+	</bean>
+	
+	<bean id="was" class="com.akshay.acting.WasPoem"/>
+	
+	<bean id="bheemu" class="com.akshay.acting.PoeticJuggler">
+		<constructor-arg value="14"/>
+		<constructor-arg ref="was"/>
+	</bean>
+
+</beans>
